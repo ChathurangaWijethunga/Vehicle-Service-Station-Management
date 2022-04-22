@@ -29,6 +29,13 @@ mongoose
 const routesSpareParts = require('./routes/SpareParts.routes');
 app.use("/SpareParts", routesSpareParts);
 
+const employeeRoutes = require("./routes/Employee/employee.routes");
+app.use("/api/Employee", employeeRoutes);
+
+//sparepartsroot
+const routesSpareParts = require('./routes/SpareParts.routes');
+app.use("/SpareParts", routesSpareParts);
+
 
 //this is useful when hosting the app.
 //this will assign given port number by server if not assigned 5000
