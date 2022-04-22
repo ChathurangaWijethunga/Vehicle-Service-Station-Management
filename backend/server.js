@@ -25,9 +25,7 @@ mongoose
 //http://localhost:3001/api/Customer
 //if someone give above url it will point to the below 2nd parameter(routes file)
 
-//sparepartsroot
-const routesSpareParts = require('./routes/SpareParts.routes');
-app.use("/SpareParts", routesSpareParts);
+
 
 const employeeRoutes = require("./routes/Employee/employee.routes");
 app.use("/api/Employee", employeeRoutes);
