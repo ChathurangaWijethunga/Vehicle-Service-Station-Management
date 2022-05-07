@@ -20,13 +20,18 @@ const NavBar = props => (
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a className="dropdown-item" href="/ScheduleSM">Service Schedule</a></li>
                     <li><a className="dropdown-item" href="/GMap">Vehicle Assistance</a></li>
-                    <li><hr className="dropdown-divider"></hr></li>
-                    <li><a className="dropdown-item" href="#">Spare-Parts</a></li>
+                    {/* <li><hr className="dropdown-divider"></hr></li> */}
+                    {/* <li><a className="dropdown-item" href="#">Spare-Parts</a></li> */}
                 </ul>
                 </li>
+
                 <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a className="nav-link" href="/SpareParts">Spare-Parts</a>
                 </li>
+
+                {/* <li className="nav-item">
+                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> */}
             </ul>
             
             </div>
