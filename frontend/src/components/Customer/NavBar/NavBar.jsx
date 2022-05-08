@@ -76,11 +76,12 @@ const NavBar = (props) => (
                 </li> */}
             </ul>
           </li>
-          <li className="nav-item">
-                <a className="nav-link" href="/SpareParts">
-                  Spare-Parts
-                </a>
-              </li>
+          
+          <li className="nav-item dropdown">
+            <a className="nav-link" href="/SpareParts" role="button">
+            Spare-Parts
+            </a>
+          </li>
         </ul>
       </div>
     </div>
