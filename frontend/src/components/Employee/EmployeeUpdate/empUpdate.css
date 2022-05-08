@@ -1,0 +1,47 @@
+.empUpdateInputs {
+  width: 100% !important;
+}
+.fControl {
+  width: 100%;
+}
+.empUpdateForm {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.personalInfo {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.infoTitle {
+  margin-left: 120px;
+}
+.contact {
+  margin-top: 20px;
+}
+.Btn {
+  width: 200px;
+  height: 40px;
+}
+.cancel {
+  background: none !important;
+  color: black;
+  border: none !important;
+  font-weight: bold;
+}
+.cancel:hover {
+  color: rgb(219, 9, 9);
+  border: none;
+}
+.update {
+  margin-left: 15px;
+  background-color: rgb(70, 95, 23);
+  border: 1px solid rgb(70, 95, 23);
+}
+.update:hover {
+  background-color: darkgreen;
+  border: 1px solid rgb(70, 95, 23);
+}
