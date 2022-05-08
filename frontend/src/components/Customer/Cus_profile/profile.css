@@ -38,6 +38,7 @@
     background-size: cover;
     border-radius: 50%;
     position: relative;
+   
   }
   
   .profilePicContainer {
@@ -45,7 +46,8 @@
     display: block;
     float: left;
     text-align: center;
-    position: absolute;
+    position: relative;
+    margin-bottom: 1000px;
   }
   
   .btnChanges {

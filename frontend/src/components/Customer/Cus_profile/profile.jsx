@@ -75,6 +75,12 @@ const Profile = () => {
       <Link to="/">
         <Button className="logout">Logout</Button>
       </Link>
+      <div className="profilePicContainer" style={{float:"left", marginBottom:"-250px"}}>
+          <img className="profilePic" />
+          {/* <input type="file" onChange={this.onFileChange}/> */}
+          <Button className="btnChanges" >Change profile picture</Button>
+          
+        </div>
       <div className=" mx-md-4 m-4">
         <div
           style={{
@@ -151,12 +157,7 @@ const Profile = () => {
 
           
         </div>
-        <div className="profilePicContainer">
-          <img className="profilePic" />
-          {/* <input type="file" onChange={this.onFileChange}/> */}
-          <Button className="btnChanges" >Change profile picture</Button>
-          
-        </div>
+        
       </div></div></div></div></div></div></div>
       </div></section>
     </div>
