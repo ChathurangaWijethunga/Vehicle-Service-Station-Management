@@ -19,14 +19,14 @@ const Footer = props => (
                             <h4>Help us make cool things!</h4> <a href="#" className="acs">
                                 <p>Check our open positions</p>
                             </a><br/>
-                            <h4 className="bussinesshours popup" onPointerOver={myFunction} onPointerOut={myFunction}>Business Hours..
+                            {/* <h4 className="bussinesshours popup" onPointerOver={myFunction} onPointerOut={myFunction}>Business Hours..
                             <span class="popuptext" id="myPopup">Mon:	8:30 AM – 5:30 PM<br/>
                                                             Tue:	8:00 AM – 5:30 PM<br/>
                                                             Wed:	8:00 AM – 5:30 PM<br/>
                                                             Thu:	8:00 AM – 5:30 PM<br/>
                                                             Fri:	8:00 AM – 5:30 PM<br/>
                                                             Sat:	8:00 AM – 5:30 PM<br/>
-                                                            Sun:	8:00 AM – 6:00 PM</span></h4>
+                                                            Sun:	8:00 AM – 6:00 PM</span></h4> */}
                         </div>
                     </div>
                     <div className="col-md-6 pb-5">
@@ -47,13 +47,15 @@ const Footer = props => (
             <div className="col-md-2">
                 
             </div>
-            <div className="col-md-7 d-flex justify-content-center">
+            {/* <div className="col-md-7 d-flex justify-content-center">
+
+
                 <div className="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3"> <a href="#" className="acs">About</a> </div>
                 <div className="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3"> <a href="#" className="acs">Work</a> </div>
                 <div className="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3"> <a href="#" className="acs">Blog</a> </div>
                 <div className="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3"> <a href="#" className="acs">Careers</a> </div>
                 <div className="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3"> <a href="#" className="acs">Contact</a> </div>
-            </div>
+            </div> */}
             
         </div>
     </div>
