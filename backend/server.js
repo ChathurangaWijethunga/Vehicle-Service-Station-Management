@@ -14,17 +14,13 @@ app.use(express.json())
 mongoose
   .connect(
     //'mongodb+srv://Employee_mgt:Employeemgt123@cluster0.aljxk.mongodb.net/Employee_mgt?retryWrites=true&w=majority',
-    'mongodb+srv://itpmproject-2022:ALUA6wvovypYEDHd@itpm-project-2022.dxsfg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-    },
+    "mongodb+srv://itpmproject-2022:ALUA6wvovypYEDHd@itpm-project-2022.dxsfg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
   )
   .then(() => {
-    console.log('Mongo DB Connected')
+    console.log("Mongo DB Connected");
   })
-  .catch((err) => [console.log(err)])
+  .catch((err) => [console.log(err)]);
 
 //http://localhost:3001/api/Customer
 //if someone give above url it will point to the below 2nd parameter(routes file)
@@ -36,16 +32,18 @@ app.use('/api/Customer', require('./Routes/Routes/customer.routes'))
 //const regsroutes = require("./Routes/Routes/customer.routes");
 //app.use("/api/registercustomer/", regsroutes);
 
+const employeeRoutes = require("./routes/Employee/employee.routes");
+app.use("/api/Employee", employeeRoutes);
 // const employeeRoutes = require("./routes/Employee/employee.routes");
 // app.use("/api/Employee", employeeRoutes);
 
 //sparepartsroot
-const routesSpareParts = require('./routes/SpareParts.routes')
-app.use('/SpareParts', routesSpareParts)
+const routesSpareParts = require("./routes/SpareParts.routes");
+app.use("/SpareParts", routesSpareParts);
 
 //this is useful when hosting the app.
 //this will assign given port number by server if not assigned 5000
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
 
 //pass that as 1st param
 //2nd para is a function, it displays msg in console if server goo

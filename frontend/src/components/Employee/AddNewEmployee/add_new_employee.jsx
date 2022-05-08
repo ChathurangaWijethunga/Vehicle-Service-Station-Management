@@ -1,75 +1,75 @@
-import './addEmployee.css'
-import { Link } from 'react-router-dom'
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { useHistory } from 'react-router'
+import "./addEmployee.css";
+import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useHistory } from "react-router";
 
 const AddEmployee = (props) => {
   // Role Select
-  const [role, setRole] = useState(1)
+  const [role, setRole] = useState(1);
 
   // Get all employees for count
-  const [employees, setEmployees] = useState([])
+  const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
     function getEmployee() {
       axios
-        .get('http://localhost:3001/api/Employee/all')
+        .get("http://localhost:3001/api/Employee/all")
         .then((res) => {
-          setEmployees(res.data)
+          setEmployees(res.data);
         })
         .catch((err) => {
-          console.log(err)
-        })
+          console.log(err);
+        });
     }
-    getEmployee()
-  }, [])
+    getEmployee();
+  }, []);
 
   // Get all Managers for count
-  const [manager, setManager] = useState([])
+  const [manager, setManager] = useState([]);
 
   useEffect(() => {
     function getManagers() {
       axios
-        .get('http://localhost:3001/api/Employee/allManagers')
+        .get("http://localhost:3001/api/Employee/allManagers")
         .then((res) => {
-          setManager(res.data)
+          setManager(res.data);
         })
         .catch((err) => {
-          console.log(err)
-        })
+          console.log(err);
+        });
     }
-    getManagers()
-  }, [])
+    getManagers();
+  }, []);
 
   //Generate Employee ID
-  const emplen = employees.length
-  const idGen = emplen + 1
-  const eid = 'EMP00' + idGen
+  const emplen = employees.length;
+  const idGen = emplen + 1;
+  const eid = "EMP00" + idGen;
 
   // Generate Managers ID
-  const fmid = 'FINANCE'
-  const hmid = 'HR'
-  const spmid = 'SPARE-PART'
-  const umid = 'UTILITY'
-  const mmid = 'MAINTENANCE'
-  const smid = 'SERVICES'
+  const fmid = "FINANCE";
+  const hmid = "HR";
+  const spmid = "SPARE-PART";
+  const umid = "UTILITY";
+  const mmid = "MAINTENANCE";
+  const smid = "SERVICES";
 
-  const history = useHistory()
+  const history = useHistory();
 
-  const [fName, setfName] = useState()
-  const [lName, setlName] = useState()
-  const [address, setAddress] = useState()
-  const [nic, setnic] = useState()
-  const [teleNumber, setTeleNumber] = useState()
-  const [Mobilenum, setMobileNum] = useState()
-  const [email, setemail] = useState()
-  const [DOB, setDOB] = useState()
-  const [status, setStatus] = useState()
-  const [password, setPassword] = useState()
+  const [fName, setfName] = useState();
+  const [lName, setlName] = useState();
+  const [address, setAddress] = useState();
+  const [nic, setnic] = useState();
+  const [teleNumber, setTeleNumber] = useState();
+  const [Mobilenum, setMobileNum] = useState();
+  const [email, setemail] = useState();
+  const [DOB, setDOB] = useState();
+  const [status, setStatus] = useState();
+  const [password, setPassword] = useState();
 
   function sendEmpDetails(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     const newEmployee = {
       eid,
@@ -83,50 +83,50 @@ const AddEmployee = (props) => {
       DOB,
       status,
       password,
-    }
+    };
     axios
-      .post('http://localhost:3001/api/Employee/add', newEmployee)
+      .post("http://localhost:3001/api/Employee/add", newEmployee)
       .then(() => {
-        console.log('employee Added')
-        alert('Your application successfully send')
-        history.push('/tabView')
+        console.log("employee Added");
+        alert("Your application successfully send");
+        history.push("/tabView");
       })
       .catch((err) => {
-        console.log(err)
-      })
+        console.log(err);
+      });
   }
 
   // send Manager details
   function sendManagerDetails(e, role, already) {
-    e.preventDefault()
-    var mid = ''
+    e.preventDefault();
+    var mid = "";
     if (role == 2) {
-      mid = fmid
+      mid = fmid;
     } else if (role == 3) {
-      mid = hmid
+      mid = hmid;
     } else if (role == 4) {
-      mid = spmid
+      mid = spmid;
     } else if (role == 5) {
-      mid = umid
+      mid = umid;
     } else if (role == 6) {
-      mid = mmid
+      mid = mmid;
     } else if (role == 7) {
-      mid = smid
-    } else mid = 1
+      mid = smid;
+    } else mid = 1;
 
     // check manager id equal to the database
-    var have = 'false'
+    var have = "false";
 
     for (let i = 0; i < already.length; i++) {
       if (mid == already[i].mid) {
-        have = 'true'
-        alert(mid + ' Manager has been already added to the database')
-        return -1
+        have = "true";
+        alert(mid + " Manager has been already added to the database");
+        return -1;
       }
     }
 
     // prevent add the same manager into the database
-    if (have == 'false') {
+    if (have == "false") {
       const newManager = {
         mid,
         fName,
@@ -137,17 +137,17 @@ const AddEmployee = (props) => {
         email,
         DOB,
         password,
-      }
+      };
       axios
-        .post('http://localhost:3001/api/Employee/addManager', newManager)
+        .post("http://localhost:3001/api/Employee/addManager", newManager)
         .then(() => {
-          console.log('Manager Added')
-          alert('Manager application successfully send')
-          history.push('/tabView')
+          console.log("Manager Added");
+          alert("Manager application successfully send");
+          history.push("/tabView");
         })
         .catch((err) => {
-          console.log(err)
-        })
+          console.log(err);
+        });
     }
   }
 
@@ -162,7 +162,7 @@ const AddEmployee = (props) => {
             className="empID"
             type="text"
             disabled
-            style={{ marginLeft: '68px' }}
+            style={{ marginLeft: "68px" }}
             value={
               role == 1
                 ? eid
@@ -187,7 +187,7 @@ const AddEmployee = (props) => {
           class="form-select form-select-sm role-select roles"
           aria-label=".form-select-sm example"
           onChange={(e) => {
-            setRole(e.target.value)
+            setRole(e.target.value);
           }}
         >
           <option className="roles" value="1" selected>
@@ -219,9 +219,9 @@ const AddEmployee = (props) => {
           className="empAddForm"
           onSubmit={(e) => {
             if (role == 1) {
-              sendEmpDetails(e)
+              sendEmpDetails(e);
             } else {
-              sendManagerDetails(e, role, manager)
+              sendManagerDetails(e, role, manager);
             }
           }}
         >
@@ -237,7 +237,7 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="Fname"
                 onChange={(e) => {
-                  setfName(e.target.value)
+                  setfName(e.target.value);
                 }}
               />
             </div>
@@ -251,7 +251,7 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="Lname"
                 onChange={(e) => {
-                  setlName(e.target.value)
+                  setlName(e.target.value);
                 }}
               />
             </div>
@@ -265,7 +265,7 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="address"
                 onChange={(e) => {
-                  setAddress(e.target.value)
+                  setAddress(e.target.value);
                 }}
               />
             </div>
@@ -278,14 +278,14 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="nic"
                 onChange={(e) => {
-                  setnic(e.target.value)
+                  setnic(e.target.value);
                 }}
               />
             </div>
           </div>
           <h4 className="infoTitle contact">Contact Information</h4>
           <div className="personalInfo">
-            <div class={'mb-3' + ' ' + (role == 1 ? '' : 'hide')}>
+            <div class={"mb-3" + " " + (role == 1 ? "" : "hide")}>
               <label for="phone" class="form-label">
                 TelePhone
               </label>
@@ -294,7 +294,7 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="phone"
                 onChange={(e) => {
-                  setTeleNumber(e.target.value)
+                  setTeleNumber(e.target.value);
                 }}
               />
             </div>
@@ -307,7 +307,7 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="mobile"
                 onChange={(e) => {
-                  setMobileNum(e.target.value)
+                  setMobileNum(e.target.value);
                 }}
               />
             </div>
@@ -321,7 +321,7 @@ const AddEmployee = (props) => {
                 id="email"
                 aria-describedby="emailHelp"
                 onChange={(e) => {
-                  setemail(e.target.value)
+                  setemail(e.target.value);
                 }}
               />
             </div>
@@ -333,11 +333,11 @@ const AddEmployee = (props) => {
               <input
                 type="date"
                 onChange={(e) => {
-                  setDOB(e.target.value)
+                  setDOB(e.target.value);
                 }}
               />
             </div>
-            <div className={role == 1 ? '' : 'hide'}>
+            <div className={role == 1 ? "" : "hide"}>
               <label>Status</label>
               <div className="mb-3">
                 <input
@@ -345,7 +345,7 @@ const AddEmployee = (props) => {
                   name="status"
                   defaultValue="Unmarried"
                   onChange={(e) => {
-                    setStatus(e.target.value)
+                    setStatus(e.target.value);
                   }}
                 />
                 <label>Unmarried</label>
@@ -355,7 +355,7 @@ const AddEmployee = (props) => {
                   className="status"
                   defaultValue="Married"
                   onChange={(e) => {
-                    setStatus(e.target.value)
+                    setStatus(e.target.value);
                   }}
                 />
                 <label>Married</label>
@@ -385,20 +385,20 @@ const AddEmployee = (props) => {
                 className="form-control empF-con empUpdateInputs"
                 id="password"
                 onChange={(e) => {
-                  setPassword(e.target.value)
+                  setPassword(e.target.value);
                 }}
               />
             </div>
             <Link to="/tabView">
               <button className="btn Btn btn-primary cancel">CANCEL</button>
             </Link>
-           <button type="submit"  className="btn Btn btn-primary update">
+            <button type="submit" className="btn Btn btn-primary update">
               ADD
             </button>
           </div>
         </form>
       </div>
     </div>
-  )
-}
-export default AddEmployee
+  );
+};
+export default AddEmployee;
