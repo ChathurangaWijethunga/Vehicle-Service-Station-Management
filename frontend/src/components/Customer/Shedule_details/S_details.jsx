@@ -20,6 +20,7 @@ const Shedule = props => {
             axios.delete('http://localhost:3001/api/Customer/delete/'+_id)
         .then(()=> {
             alert('Shedule deleted successfully');
+            window.location.reload();
         }).catch((err) => {
             alert(err.message);
         });

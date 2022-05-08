@@ -19,6 +19,7 @@ const Customer = props => {
             axios.delete('http://localhost:3001/api/Customer/tempdelete/'+_id)
         .then(()=> {
             alert('Customer deleted successfully');
+            window.location.reload();
         }).catch((err) => {
             alert(err.message);
         });

@@ -197,7 +197,7 @@ class registercustomer extends React.Component{
         axios.post('http://localhost:3001/api/Customer/registercustomer', Customer)
         .then(()=> {
             alert('Data Successfuly Inserted ');
-            
+            window.location = "/Cus_login/Login";
 
         }).catch((err) => {
             alert(err.message);
