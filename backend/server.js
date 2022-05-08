@@ -27,9 +27,8 @@ mongoose
 
 //http://localhost:3001/api/Customer
 //if someone give above url it will point to the below 2nd parameter(routes file)
-
-
-
+const paymentroutes = require('./routes/Finance/finance.routes')
+app.use('/api/payments', paymentroutes)
 
 //this is useful when hosting the app.
 //this will assign given port number by server if not assigned 5000
@@ -38,5 +37,5 @@ const PORT = process.env.PORT || 3001
 //pass that as 1st param
 //2nd para is a function, it displays msg in console if server goo
 app.listen(PORT, () => {
-  console.log('Server is Running')
+  console.log('Server is Running 3001')
 })

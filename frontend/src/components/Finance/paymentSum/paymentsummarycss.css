@@ -1,0 +1,78 @@
+.full {
+  background-image: url(https://img.freepik.com/free-photo/car-service-centre-auto-repair-workshop-blurred-panoramic-background_293060-5326.jpg?w=1800);
+  background-size: cover;
+}
+
+.sum {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.btnset {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  flex-wrap: nowrap;
+  padding-left: 230px;
+  padding-bottom: 50px;
+  opacity: 60%;
+}
+
+.BtnType {
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  border-width: 1px;
+  position: relative;
+}
+
+.ear {
+  transition: 0.3s;
+}
+
+.ear::before {
+  content: '';
+  background-size: cover;
+  background-position-x: -200px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.ear:hover {
+  background-color: #282c34;
+}
+
+.out {
+  margin-left: 40px;
+  transition: 0.3s;
+}
+
+.out::before {
+  content: '';
+  background-size: cover;
+  background-position-x: -200px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.out:hover {
+  background-color: #282c34;
+}
