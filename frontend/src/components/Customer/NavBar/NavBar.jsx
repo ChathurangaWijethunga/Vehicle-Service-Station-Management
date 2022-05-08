@@ -70,21 +70,13 @@ const NavBar = (props) => (
                   <li>
                     <hr className="dropdown-divider"></hr>
                   </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Spare-Parts
-                    </a>
-                  </li>
+                  
                   {/* <li><hr className="dropdown-divider"></hr></li> */}
                   {/* <li><a className="dropdown-item" href="#">Spare-Parts</a></li> */}
                 </ul>
               </li>
 
-              <li className="nav-item">
-                <a className="nav-link" href="/SpareParts">
-                  Spare-Parts
-                </a>
-              </li>
+              
 
               {/* <li className="nav-item">
                 <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -94,6 +86,11 @@ const NavBar = (props) => (
           <li className="nav-item dropdown">
             <a className="nav-link" href="/payment" role="button">
               Payment
+            </a>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link" href="/SpareParts" role="button">
+            Spare-Parts
             </a>
           </li>
         </ul>
