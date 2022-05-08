@@ -17,17 +17,17 @@ const outgoingSchema = new Schema({
   price: String,
 })
 
-const SheduleSchema = new Schema({
-  name: String,
-  service: String,
-  maintenance: String,
-  vehicle: String,
-  date: Date,
-  time: String,
-  paidStatus: String,
-  cash: String,
-  balance: String,
-})
+// const SheduleSchema = new Schema({
+//   name: String,
+//   service: String,
+//   maintenance: String,
+//   vehicle: String,
+//   date: Date,
+//   time: String,
+//   paidStatus: String,
+//   cash: String,
+//   balance: String,
+// })
 
 const CardDetailsSchema = new Schema({
   payid: String,
@@ -45,7 +45,7 @@ const earningsBackupModel = mongoose.model('earningsBackup', earningsSchema)
 
 const outgoingModel = mongoose.model('outgoings', outgoingSchema)
 
-const sheduleModel = mongoose.model('Registered_Shedules', SheduleSchema)
+// const sheduleModel = mongoose.model('Registered_Shedules', SheduleSchema)
 
 const cardDetailsModel = mongoose.model('cardDetails', CardDetailsSchema)
 
@@ -53,6 +53,6 @@ module.exports = {
   earningsModel,
   earningsBackupModel,
   outgoingModel,
-  sheduleModel,
+  // sheduleModel,
   cardDetailsModel,
 }

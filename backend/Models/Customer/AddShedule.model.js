@@ -11,11 +11,13 @@ const AddShedule = new Schema({
   date: Date,
   time: String,
   price: String,
+
+  
 })
 
 //convert schema into a model
 //1st para = collection name, 2nd = schema
-// const Addshedule = mongoose.model("Registered_Shedules",AddShedule);
+ const Addshedule = mongoose.model("Registered_Shedules",AddShedule);
 
 //export our module to controller
-// module.exports = Addshedule ;
+ module.exports = Addshedule ;
