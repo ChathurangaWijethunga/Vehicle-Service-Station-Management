@@ -13,6 +13,7 @@ app.use(express.json())
 //as 1st parameter we have to pass our mongodb link
 mongoose
   .connect(
+    //'mongodb+srv://Employee_mgt:Employeemgt123@cluster0.aljxk.mongodb.net/Employee_mgt?retryWrites=true&w=majority',
     'mongodb+srv://itpmproject-2022:ALUA6wvovypYEDHd@itpm-project-2022.dxsfg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     {
       useNewUrlParser: true,
@@ -28,8 +29,10 @@ mongoose
 //http://localhost:3001/api/Customer
 //if someone give above url it will point to the below 2nd parameter(routes file)
 
-
-
+app.use("/api/Customer", require("./Routes/Routes/customer.routes"));
+//app.use("/api", require("./Routes/Routes/customer.routes"));
+//const regsroutes = require("./Routes/Routes/customer.routes");
+//app.use("/api/registercustomer/", regsroutes);
 
 //this is useful when hosting the app.
 //this will assign given port number by server if not assigned 5000

@@ -18,8 +18,10 @@ const NavBar = props => (
                     Customer
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="/ScheduleSM">Service Schedule</a></li>
+                    <li><a className="dropdown-item" href="/Shedules/Services">Service Schedule</a></li>
                     <li><a className="dropdown-item" href="/GMap">Vehicle Assistance</a></li>
+                    <li><a className="dropdown-item" href="/Cus_details/details">Customer details</a></li>
+                    <li><a className="dropdown-item" href="/Shedule_details/S_details">Shedules details</a></li>
                     <li><hr className="dropdown-divider"></hr></li>
                     <li><a className="dropdown-item" href="#">Spare-Parts</a></li>
                 </ul>

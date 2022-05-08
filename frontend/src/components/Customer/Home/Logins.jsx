@@ -174,7 +174,7 @@ class Logins extends React.Component{
                     <div className="col-md-6 login-form-2">
                         <h3>Customer Login Form</h3>
                         <form onSubmit={this.loginCustomer} >
-                            <div class="input-group form-group">
+                            {/* <div class="input-group form-group">
                             <span class="input-group-text" id="basic-addon1">+94</span>
                                 <input type="number" 
                                     className="form-control"
@@ -194,12 +194,13 @@ class Logins extends React.Component{
                                     value={this.state.cusPw} 
                                     onChange={this.setCustomerPassword}/>
                                 <div id="minlog"></div>
+                            </div><br/> */}
+                            <div className="form-group">
+                            <a className="btn btn-primary btn-lg col-md-10 col-lg-15 col-xl-12" href="/Cus_login/Login">Login</a>
+                                {/* <input type="submit" className="btnSubmit" value="Login" /> */}
                             </div><br/>
                             <div className="form-group">
-                                <input type="submit" className="btnSubmit" value="Login" />
-                            </div><br/>
-                            <div className="form-group">
-                                <a href="/sign" className="ForgetPwd">Don't have an Account? Sign-Up Here..</a>
+                                <a href="/SignUp/SignUp" className="ForgetPwd">Don't have an Account? Sign-Up Here..</a>
                             </div>
                         </form>
                     </div>
