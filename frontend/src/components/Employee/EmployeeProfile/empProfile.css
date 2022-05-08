@@ -1,0 +1,118 @@
+.data1 {
+  background-color: rgb(240, 240, 240);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.3s;
+}
+
+.data1:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.empID1 {
+  margin-left: 40px;
+  width: 350px;
+}
+.InputControl1 {
+  margin-top: 10px;
+}
+
+.profileUpper {
+  display: inline-block;
+  width: 100%;
+}
+
+.profilePic {
+  width: 200px;
+  height: 200px;
+  background-image: url(https://www.glassdoor.com/employers/app/uploads/sites/2/2018/09/resources-benefits-employees-want-most-min-768x483-1-e1540508225245.jpg?x60772);
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.profilePicContainer {
+  width: 200px;
+  display: block;
+  float: right;
+  text-align: center;
+  position: relative;
+}
+
+.btnChanges {
+  width: 80%;
+  height: 25px;
+  font-size: 10px;
+  background-color: gray;
+  border: none;
+}
+
+.done {
+  float: right;
+  width: 150px;
+}
+
+.payroll1 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+
+  text-align: right;
+}
+
+.table1 {
+  border-top: 1px solid rgb(216, 216, 216);
+  width: 100%;
+  background-color: rgb(240, 235, 235);
+}
+
+.table1 th {
+  border-right: 1px solid rgb(206, 206, 206);
+}
+
+.table1 td {
+  text-align: right;
+}
+.atdiv2 {
+  width: 100% !important;
+}
+.ass {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.atlist {
+  margin-left: 0px;
+  min-height: 60px !important;
+  background-color: rgb(252, 248, 248) !important;
+}
+.logout {
+  position: relative;
+  display: block;
+  float: right;
+  background: none;
+  border: none;
+  color: red;
+}
+.logout:hover {
+  background: none;
+  color: darkred;
+}
+.logout:focus {
+  background: none;
+}
+
+.attendBtns {
+  margin-top: 40px;
+}
+
+.attend {
+  width: 80px;
+}
+
+.leave {
+  margin-left: 5px;
+}

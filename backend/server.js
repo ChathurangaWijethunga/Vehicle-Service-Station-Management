@@ -13,6 +13,7 @@ app.use(express.json());
 //as 1st parameter we have to pass our mongodb link
 mongoose
   .connect(
+    //'mongodb+srv://Employee_mgt:Employeemgt123@cluster0.aljxk.mongodb.net/Employee_mgt?retryWrites=true&w=majority',
     'mongodb+srv://itpmproject-2022:ALUA6wvovypYEDHd@itpm-project-2022.dxsfg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
  )
@@ -25,10 +26,14 @@ mongoose
 //http://localhost:3001/api/Customer
 //if someone give above url it will point to the below 2nd parameter(routes file)
 
+app.use("/api/Customer", require("./Routes/Routes/customer.routes"));
+//app.use("/api", require("./Routes/Routes/customer.routes"));
+//const regsroutes = require("./Routes/Routes/customer.routes");
+//app.use("/api/registercustomer/", regsroutes);
 
 
-const employeeRoutes = require("./routes/Employee/employee.routes");
-app.use("/api/Employee", employeeRoutes);
+// const employeeRoutes = require("./routes/Employee/employee.routes");
+// app.use("/api/Employee", employeeRoutes);
 
 //sparepartsroot
 const routesSpareParts = require('./routes/SpareParts.routes');
