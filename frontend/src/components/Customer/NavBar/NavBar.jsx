@@ -43,20 +43,52 @@ const NavBar = (props) => (
                 <a className="dropdown-item" href="/ScheduleSM">
                   Service Schedule
                 </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a className="dropdown-item" href="/Shedules/Services">
+                      Service Schedule
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/GMap">
+                      Vehicle Assistance
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/Cus_details/details">
+                      Customer details
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="/Shedule_details/S_details"
+                    >
+                      Shedules details
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider"></hr>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Spare-Parts
+                    </a>
+                  </li>
+                  {/* <li><hr className="dropdown-divider"></hr></li> */}
+                  {/* <li><a className="dropdown-item" href="#">Spare-Parts</a></li> */}
+                </ul>
               </li>
-              <li>
-                <a className="dropdown-item" href="/GMap">
-                  Vehicle Assistance
-                </a>
-              </li>
-              <li>
-                <hr className="dropdown-divider"></hr>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
+
+              <li className="nav-item">
+                <a className="nav-link" href="/SpareParts">
                   Spare-Parts
                 </a>
               </li>
+
+              {/* <li className="nav-item">
+                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> */}
             </ul>
           </li>
           <li className="nav-item dropdown">
